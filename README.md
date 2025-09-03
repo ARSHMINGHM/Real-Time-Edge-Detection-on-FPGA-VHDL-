@@ -72,6 +72,7 @@ Implement and simulate a VHDL module for image transformation using the **Haar W
 ---
 
 ## 🗂️ File Structure (suggested)
+```
 project/
 │
 ├── python/ # Python simulations
@@ -80,7 +81,7 @@ project/
 ├── testbenches/ # Test code for verification
 ├── output_images/ # Resultant PGM images
 └── report/ # Vivado synthesis report
-
+```
 ---
 
 ## ✅ Build & Run Instructions (HLS)
