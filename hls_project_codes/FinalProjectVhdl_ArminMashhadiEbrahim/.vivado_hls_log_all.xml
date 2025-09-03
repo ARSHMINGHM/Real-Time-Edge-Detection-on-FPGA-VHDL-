@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'SaveToRamAndOutput/input_image_read' to 0." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.609+0330" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'SaveToRamAndOutput/input_image_read' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.596+0330" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'SaveToRamAndOutput/input_image_empty_n' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.582+0330" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'SaveToRamAndOutput/input_image_dout' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.570+0330" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'SaveToRamAndOutput' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[27] ('mul_ln47', SaveToRamAndOutput.c:47) [22]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[27] ('add_ln47', SaveToRamAndOutput.c:47) [27]  (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('output_image_addr', SaveToRamAndOutput.c:47) [29]  (0 ns)&#xD;&#xA;&#x9;'store' operation ('output_image_addr_write_ln47', SaveToRamAndOutput.c:47) of constant 0 on array 'output_image' [30]  (3.25 ns)" projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.341+0330" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.328+0330" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'comparator' to 'comparator.1' " projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:26.199+0330" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'genin' (generator_2x2.c:20) because its parent loop or function is pipelined." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:25.761+0330" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (window_processor.c:28) because its parent loop or function is pipelined." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:25.738+0330" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:05.878+0330" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="FinalProjectVhdl_ArminMashhadiEbrahim" solutionName="solution1" date="2025-07-21T16:31:05.857+0330" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

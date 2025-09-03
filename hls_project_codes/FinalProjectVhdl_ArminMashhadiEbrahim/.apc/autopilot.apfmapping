@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="generator_2x2.c" path="X:\xilinx\hls\generator_2x2.c"/>
+    <originFiles name="window_processor.c" path="X:\xilinx\hls\window_processor.c"/>
+    <originFiles name="comparator.c" path="X:\xilinx\hls\comparator.c"/>
+    <originFiles name="SaveToRamAndOutput.c" path="X:\xilinx\hls\SaveToRamAndOutput.c"/>
+  </source>
+  <testbench>
+    <originFiles name="generator_2x2_tb.c" path="X:\xilinx\hls\generator_2x2_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

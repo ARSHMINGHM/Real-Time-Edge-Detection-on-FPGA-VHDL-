@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Generating csim.exe
+Makefile.rules:401: recipe for target 'csim.exe' failed
+obj/comparator.o: In function `comparator':
+X:\xilinx\hls\FinalProjectVhdl_ArminMashhadiEbrahim\solution1\csim\build/apcc_db/comparator.c:346: undefined reference to `edge_map_strong_fixed_threshold'
+X:\xilinx\hls\FinalProjectVhdl_ArminMashhadiEbrahim\solution1\csim\build/apcc_db/comparator.c:365: undefined reference to `edge_map_strong_fixed_threshold'
+X:\xilinx\hls\FinalProjectVhdl_ArminMashhadiEbrahim\solution1\csim\build/apcc_db/comparator.c:384: undefined reference to `edge_map_strong_fixed_threshold'
+X:\xilinx\hls\FinalProjectVhdl_ArminMashhadiEbrahim\solution1\csim\build/apcc_db/comparator.c:403: undefined reference to `edge_map_strong_fixed_threshold'
+collect2.exe: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

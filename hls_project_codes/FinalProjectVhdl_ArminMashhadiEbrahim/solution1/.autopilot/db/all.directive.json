@@ -1,0 +1,22 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "dwt_1d",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "STREAM",
+            "option": [
+              {
+                "name": "variable",
+                "value": "low_pass",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        }]
+    }]}

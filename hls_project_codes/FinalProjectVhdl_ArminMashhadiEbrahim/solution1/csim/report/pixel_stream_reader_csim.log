@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../generator_2x2.c in debug mode
+INFO: [HLS 200-10] Running 'X:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'arshm' on host 'arshminghm-lapt' (Windows NT_amd64 version 6.2) on Sun Jul 20 15:23:51 +0330 2025
+INFO: [HLS 200-10] In directory 'X:/xilinx/hls/FinalProjectVhdl_ArminMashhadiEbrahim/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Pixel[0][0] = 1
+Pixel[0][1] = 2
+Pixel[0][2] = 3
+Pixel[0][3] = 4
+Pixel[0][4] = 5
+Pixel[1][0] = 6
+Pixel[1][1] = 7
+Pixel[1][2] = 8
+Pixel[1][3] = 9
+Pixel[1][4] = 10
+Pixel[2][0] = 11
+Pixel[2][1] = 12
+Pixel[2][2] = 13
+Pixel[2][3] = 14
+Pixel[2][4] = 15
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

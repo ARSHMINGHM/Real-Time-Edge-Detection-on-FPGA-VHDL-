@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vivado HLS Report for 'SaveToRamAndOutput'
+================================================================
+* Date:           Mon Jul 21 16:31:26 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        FinalProjectVhdl_ArminMashhadiEbrahim
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z015-clg485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.634|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  105737|  105737|  105737|  105737|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  105735|  105735|         2|          1|          1|  105735|    yes   |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i32* %input_image, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 5 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %input_image) nounwind, !map !31"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([105735 x i8]* %output_image) nounwind, !map !38"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([19 x i8]* @SaveToRamAndOutput_s) nounwind"   --->   Operation 8 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.76ns)   --->   "br label %.preheader" [SaveToRamAndOutput.c:28]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 4.45>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i17 [ 0, %0 ], [ %add_ln28, %hls_label_0 ]" [SaveToRamAndOutput.c:28]   --->   Operation 10 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i_0 = phi i9 [ 0, %0 ], [ %select_ln47_1, %hls_label_0 ]" [SaveToRamAndOutput.c:47]   --->   Operation 11 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%j_0 = phi i9 [ 0, %0 ], [ %j, %hls_label_0 ]"   --->   Operation 12 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (2.43ns)   --->   "%icmp_ln28 = icmp eq i17 %indvar_flatten, -25337" [SaveToRamAndOutput.c:28]   --->   Operation 13 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (2.10ns)   --->   "%add_ln28 = add i17 %indvar_flatten, 1" [SaveToRamAndOutput.c:28]   --->   Operation 14 'add' 'add_ln28' <Predicate = true> <Delay = 2.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %1, label %hls_label_0" [SaveToRamAndOutput.c:28]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.82ns)   --->   "%i = add i9 %i_0, 1" [SaveToRamAndOutput.c:28]   --->   Operation 16 'add' 'i' <Predicate = (!icmp_ln28)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (1.66ns)   --->   "%icmp_ln29 = icmp eq i9 %j_0, -141" [SaveToRamAndOutput.c:29]   --->   Operation 17 'icmp' 'icmp_ln29' <Predicate = (!icmp_ln28)> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.96ns)   --->   "%select_ln47 = select i1 %icmp_ln29, i9 0, i9 %j_0" [SaveToRamAndOutput.c:47]   --->   Operation 18 'select' 'select_ln47' <Predicate = (!icmp_ln28)> <Delay = 0.96> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.96ns)   --->   "%select_ln47_1 = select i1 %icmp_ln29, i9 %i, i9 %i_0" [SaveToRamAndOutput.c:47]   --->   Operation 19 'select' 'select_ln47_1' <Predicate = (!icmp_ln28)> <Delay = 0.96> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (1.82ns)   --->   "%j = add i9 %select_ln47, 1" [generator_2x2.c:22->window_processor.c:22->comparator.c:31]   --->   Operation 20 'add' 'j' <Predicate = (!icmp_ln28)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 9.63>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 105735, i64 105735, i64 105735) nounwind"   --->   Operation 21 'speclooptripcount' 'empty_2' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i9 %select_ln47_1 to i18" [SaveToRamAndOutput.c:47]   --->   Operation 22 'zext' 'zext_ln47' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (3.36ns) (grouped into DSP with root node add_ln47)   --->   "%mul_ln47 = mul i18 %zext_ln47, 371" [SaveToRamAndOutput.c:47]   --->   Operation 23 'mul' 'mul_ln47' <Predicate = (!icmp_ln28)> <Delay = 3.36> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str18) nounwind" [SaveToRamAndOutput.c:29]   --->   Operation 24 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str7) nounwind" [SaveToRamAndOutput.c:30]   --->   Operation 25 'specpipeline' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln47_1 = zext i9 %select_ln47 to i18" [SaveToRamAndOutput.c:47]   --->   Operation 26 'zext' 'zext_ln47_1' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (3.02ns) (root node of the DSP)   --->   "%add_ln47 = add i18 %mul_ln47, %zext_ln47_1" [SaveToRamAndOutput.c:47]   --->   Operation 27 'add' 'add_ln47' <Predicate = (!icmp_ln28)> <Delay = 3.02> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln47 = sext i18 %add_ln47 to i64" [SaveToRamAndOutput.c:47]   --->   Operation 28 'sext' 'sext_ln47' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%output_image_addr = getelementptr [105735 x i8]* %output_image, i64 0, i64 %sext_ln47" [SaveToRamAndOutput.c:47]   --->   Operation 29 'getelementptr' 'output_image_addr' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (3.25ns)   --->   "store i8 0, i8* %output_image_addr, align 1" [SaveToRamAndOutput.c:47]   --->   Operation 30 'store' <Predicate = (!icmp_ln28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 105735> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str18, i32 %tmp) nounwind" [SaveToRamAndOutput.c:48]   --->   Operation 31 'specregionend' 'empty_3' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br label %.preheader" [SaveToRamAndOutput.c:29]   --->   Operation 32 'br' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "ret void" [SaveToRamAndOutput.c:50]   --->   Operation 33 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten', SaveToRamAndOutput.c:28) with incoming values : ('add_ln28', SaveToRamAndOutput.c:28) [9]  (1.77 ns)
+
+ <State 2>: 4.45ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', generator_2x2.c:22->window_processor.c:22->comparator.c:31) [11]  (0 ns)
+	'icmp' operation ('icmp_ln29', SaveToRamAndOutput.c:29) [18]  (1.66 ns)
+	'select' operation ('select_ln47', SaveToRamAndOutput.c:47) [19]  (0.968 ns)
+	'add' operation ('j', generator_2x2.c:22->window_processor.c:22->comparator.c:31) [25]  (1.82 ns)
+
+ <State 3>: 9.63ns
+The critical path consists of the following:
+	'mul' operation of DSP[27] ('mul_ln47', SaveToRamAndOutput.c:47) [22]  (3.36 ns)
+	'add' operation of DSP[27] ('add_ln47', SaveToRamAndOutput.c:47) [27]  (3.02 ns)
+	'getelementptr' operation ('output_image_addr', SaveToRamAndOutput.c:47) [29]  (0 ns)
+	'store' operation ('store_ln47', SaveToRamAndOutput.c:47) of constant 0 on array 'output_image' [30]  (3.25 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
